@@ -1,0 +1,15 @@
+body {
+  padding-top: 50px;
+}
+
+#divTotal {
+  background-color: green;
+}
+
+.affix, .affix-top {
+  right: 0;
+}
+
+.affix-top{
+  position: fixed;
+}
