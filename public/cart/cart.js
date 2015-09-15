@@ -100,4 +100,30 @@ angular.module('cart', ['ngRoute'])
                 ]
             }
         ];
-    }]);
+        $scope.total = function() {
+            var total = 0;
+            for (var i in $scope.shopData) {
+                total += parseInt($scope.shopData[i].selected);
+            }
+            
+            return total;
+        }
+    }])
+    .directive('checkList', function() {
+        return {
+            restrict: 'E',
+            scope: {
+                option: "=",
+                name: "=",
+                selected: "=selected"
+            },
+            template: function(elem, attrs) {
+                return '<div class="panel-body">\
+                        <div class="radio" ng-repeat="option in option">\
+                        <label><input type="radio" ng-model="$parent.selected" ng-value="{{i.price}}" name="{{name}}">{{ option.size }} Rs. {{ option.price }}</label>\
+                        </div>\
+                        </div>'
+            }
+        }
+    });
+    
