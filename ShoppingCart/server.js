@@ -8,9 +8,13 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use('/node-modules', express.static(__dirname + '/node_modules'));
 
 app.listen('3000', function() {
-	console.log('Server running at http://localhost:3000');
+    console.log('Server running at http://localhost:3000');
 })
 
 app.get('/', function(req, res) {
-	res.sendFile('main.html', { 'root': __dirname + '/public' });
+    res.sendFile('main.html', { 'root': __dirname + '/public' });
+})
+
+app.get('/checkout', function(req, res) {
+    res.sendFile('checkout.html', { 'root': __dirname + '/public/checkout' });
 })
