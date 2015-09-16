@@ -12,5 +12,5 @@ app.listen('3000', function() {
 })
 
 app.get('/',function(req,res){
-	res.sendFile('main.html',{'root':__dirname + '/public'});
+    res.sendFile('main.html',{'root':__dirname + '/public'});
 })

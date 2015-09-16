@@ -1,0 +1,25 @@
+<form class="form-horizontal order-form" action="#/cart">
+  <div class="well">
+    <h2 class="text-center">Contact Information</h2>
+    <div ng-repeat="field in fields">
+      <div class="form-group">
+        <label class="col-sm-3"> {{ field.label }} </label>
+        <input class="col-sm-7" type="text" ng-model="field.value" required 
+        pattern="{{ field.pattern }}" title="{{ field.message }}" />
+      </div>
+    </div>
+
+    <h2 class="text-center">Billing Information</h2>
+
+    <div ng-repeat="data in credit">
+      <div class="form-group">
+        <label class="col-sm-3"> {{ data.label }} </label>
+        <input class="col-sm-7" type="text" ng-model="field.value" required
+        pattern="{{ data.pattern }}" title="{{ data.message }}"/>
+      </div>
+    </div>
+    <div class="text-center">
+      <input type="submit" class="btn btn-primary" />
+    </div>
+  </div>
+</form>

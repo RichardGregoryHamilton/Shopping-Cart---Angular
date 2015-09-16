@@ -13,3 +13,12 @@ body {
 .affix-top{
   position: fixed;
 }
+
+.order-form {
+	width: 50%;
+	margin: 3% auto 2% auto;
+}
+
+.order-form h2 {
+	padding-bottom: 2%;
+}
