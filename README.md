@@ -1,7 +1,9 @@
-# Shopping-Cart---Angular
+# Shopping-Cart-Angular
 This is a basic shopping cart application built with `AngularJS` and `Node`. This app features multiple views for the
 shopping cart, checking-out items and making purchases. You can add items to your shopping cart and the cart will update
 with the total price. When you go to checkout, the list of items and prices will be displayed.
+
+When you click on purchase, you will be taken to the order form, where you fill in information. Using Angular, all form fields are validated.
 
 # How to run
 * Open up your command line and create a new directory. `mkdir shopping-cart`
